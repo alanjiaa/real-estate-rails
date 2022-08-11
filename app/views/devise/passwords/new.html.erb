@@ -1,0 +1,15 @@
+<section class="form-auth text-center">
+	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+		<h1 class="h3 mb-3 font-weight-normal">Forgot Password?</h1>
+	<%= render "devise/shared/error_messages", resource: resource %>
+
+	<%= f.email_field :email, class: "form-control", placeholder: "Please Enter Your Email" %>
+
+
+	<div class="actions">
+		<br>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Send Reset Instructions</button>
+	</div>
+	<% end %>
+	<br>
+	<%= render "devise/shared/links" %>
